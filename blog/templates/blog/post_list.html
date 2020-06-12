@@ -7,19 +7,19 @@
             <h1><a href="/">Dalin's blog</a></h1>
         </div>
 
-        <div>
-            <p>published: 12.06.2020, 07:55 AM</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
-
-        <div>
-            <p>published: 12.06.2020, 08:00 AM</p>
-            <h2><a href="">My second post</a></h2>
-            <p>Mini-update Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+       {% for post in posts %}
 		<div>
-		{% load static %}
-		<img src="{% static "bridge1styear_site\trinity-forc.png" %}" alt="Why isn't this Trinity Force?">
+			<p>published: {{ post.published_date }}</p>
+			<h2><a href="">{{ post.title }}</a></h2>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+		{% endfor %}
+		
+		<div>
+			<p>
+			{% load static %}
+			<img src="{% static "bridge1styear_site\trinity-forc.png" %}" alt="Why isn't this Trinity Force?">
+			</p>
+		</div>
     </body>
 </html>
