@@ -1,0 +1,7 @@
+On Windows:
+
+Shift right-click your project folder to open a command window.
+
+Type in coursework\scripts\activate to run your virtual environment.
+
+Change into your site directory (cd bridge1styear_site) to run manage.py commands (e.g. runserver).
