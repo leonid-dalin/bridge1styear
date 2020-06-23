@@ -13,7 +13,7 @@
 		</div>
 		
 		<div class="post-title">
-			<h2>{{ post.title }}</h2>
+			<h1>{{ post.title }}</h1>
 		</div>
 		
 		{% if post.published_date %}
@@ -36,16 +36,17 @@
 		{% for comment in post.comments.all %}
 		{% if user.is_authenticated or comment.approved_comment %}
 		<div class="comment">
-			{% if not comment.approved_comment %}
-			<a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-			<a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
-			{% endif %}
-			
-			<div class="comment-date" font-size=75%>
+			<div class="comment-date" style="font-size:75%;">
 				{{ comment.created_date }}	
+				{% if not comment.approved_comment %}
+					<br>
+					<a  class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+					<a  class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+				{% endif %}
 			</div>
 			<strong>{{ comment.author }} </strong>said:
 			<p>{{ comment.text|linebreaks }}</p>
+			
 		</div>
 		{% endif %}
 		

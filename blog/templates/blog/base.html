@@ -22,30 +22,33 @@
 					<li><a href="{% url 'post_draft_list' %}"	class="top-menu"><span class="glyphicon glyphicon-edit"></span></a></li>
                 </ul>
 				<div class="login-navbar">
-					<em>Greetings, {{ user.username }}</em>
-					<a href="{% url 'logout' %}"><span class="glyphicon glyphicon-log-out"></span></a>
+				
+					<ul class="nav navbar-nav navbar-right">
+					<li style="margin-top: 30px;"><strong >Greetings, {{ user.username }}</strong></li>
+					<li><a href="{% url 'logout' %}" class="top-menu" style="margin-right: 20px;"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
+					
+					</ul>
 				</div>
                 {% else %}
+				<div class="login-navbar">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="{% url 'login' %}">Login</a></li>
+                  <li><a href="{% url 'login' %}" class="top-menu" style="margin-right: 20px;"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                 </ul>
+				</div>
                 {% endif %}
               </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
           </nav>
-			{% if user.is_authenticated %}
-				
-			{% else %}
-				<a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
-			{% endif %}   
         </div>
 	</head>
 	<body>
 		<div class="content container">
 			<div class="row">
 				<div class="col-md-8">
-					{% block content %}
-					{% endblock %}
+					<div class="post hentry">
+						{% block content %}
+						{% endblock %}
+					</div>
 				</div>
 			</div>
 		</div>
