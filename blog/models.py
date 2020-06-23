@@ -3,12 +3,19 @@ from django.db import models
 from django.utils import timezone
 
 
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFill
+
+
 class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    title = models.CharField(max_length=200)
-    text = models.TextField()
+    title = models.CharField(max_length=255)
+    text = models.TextField(blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
+    image = models.ImageField(upload_to='post_image', blank=True, null=True)
+    #image_thumbnail = ImageSpecField(source='image', processors=[ResizeToFill(100,50)], format='JPEG', options={'quality':60}, blank=True)
+    
 
     def publish(self):
         self.published_date = timezone.now()

@@ -1,30 +1,66 @@
-h1 a, h2 a {
-    color: #B22222;
-    font-family: 'Lobster';
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat',sans-serif;
+	padding-bottom: 5px;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    font-family: 'Montserrat';
+}
+
+.post-title {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    margin: 5px 10px 0;
+    line-height: 16px;
+}
+
+.post-date {
+	font-family: 'Montserrat',sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin: -2px 10px 5px;
+    display: block;
+}
+
+.comment-date {
+    position: absolute;
+	right: 0px;
+    color: #b71c1c;
+    padding: 10px;
+	flex-direction: column;
+	font-size: 75%;
+}
+
+.login-navbar {
+	position: absolute;
+	right: 0px;
+    color: #000000;
+    padding: 5px;
+	flex-direction: column;
+	font-size: 150%;
 }
 
 .page-header {
-    background-color: #C25100;
+    background-color: #CC0000;
     margin-top: 0;
-    padding: 20px 20px 20px 40px;
+    padding-top: 20px;
+	padding-right: 20px;
+	padding-bottom: 40px;
+	padding-left: 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #00CCCC;
     font-size: 36pt;
     text-decoration: none;
 }
 
 .content {
     margin-left: 40px;
-}
-
-h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
-}
-
-.date {
-    color: #828282;
 }
 
 .save {
@@ -36,10 +72,10 @@ h1, h2, h3, h4 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
+    color: #00CCCC;
+    float: left;
     font-size: 26pt;
-    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .post {
@@ -47,9 +83,14 @@ h1, h2, h3, h4 {
 }
 
 .post h2 a, .post h2 a:visited {
-    color: #000000;
+    color: #FFFFFF;
 }
 
 .comment {
     margin: 20px 0px 20px 20px;
+}
+
+body {
+		background-color: #181818; 
+		color: #909090;
 }
