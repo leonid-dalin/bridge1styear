@@ -1,0 +1,43 @@
+{% load static %}
+<html>
+<footer>	<!-- Footer -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h1 class="logo-text">Petre <span>Leonid-Dalin</span></h1>
+                <p>Greetings! You scrolled quite a tad now. My name is Dalin, I am studying Computer Science at the University of Birmingham,</p>
+                <p>and this marvelous unit you are gazing at is my (blog) website. It serves as for my <em>Bridging Coursework</em> submission.</p>
+                <p>The creator supports <em>Dark Mode-friendly</em> projects.</p>
+                </p>
+                <div class="contact">
+                    <span><i class="fas fa-phone"></i> &nbsp; 07796-280-250</span>
+                    <span><i class="fas fa-envelope"></i> &nbsp; LXP979@student.bham.ac.uk</span>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/leonid-dalin" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/p-l-dalin/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fas fa-address-card" target="_blank"></i></a>
+                    <a href="https://twitter.com/leonidOFL" target="_blank"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-section contact-form">
+                <h2>Contact me</h2>
+                <br>
+                <form action="base.html" method="post">
+                    <input name="email" class="text-input contact-input" placeholder="Your email address...">
+                    <textarea rows="4" name="" class="text-input contact-input" placeholder="Your message..."></textarea>
+                    <button type="submit" class="btn btn-big contact-btn">
+                        <i class="fas fa-envelope"></i>
+                         Send
+                    </button>
+                </form>
+                <img class="signature" src="{% static "img\wSignature.png" %}" alt="Dalin, but smoother.">
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; LXP979.pythonanywhere.com • Designed by <strong>Petre Leonid-Dalin</strong>
+        </div>
+    </div>
+</footer>	<!--//Footer//-->
+</html>
