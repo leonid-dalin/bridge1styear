@@ -50,6 +50,10 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	background: #990000;
 }
 
+.save {
+    float: right;
+}
+
 .text-input {
 	padding: .7rem 1rem;
 	display: block;
@@ -63,6 +67,22 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 	font-size: 1.2em;
 	font-family: 'Montserrat',sans-serif;
 }
+
+input, select, textarea {
+	color: #ff0000;
+	width: auto;
+	outline: none;
+	border-radius: 5px;
+	border: 1px solid #353535;
+	color: #828282;
+	background-color: #272729;
+	line-height: 1.5rem;
+	font-size: 1.2em;
+	font-family: 'Montserrat',sans-serif;
+}
+
+
+/* HEADER */
 
 header {
 	background-color: #CC0000;
@@ -86,7 +106,7 @@ header .logo-text {
 }
 
 header .logo-text span {
-	color: #00cc66;
+	color: #4B0082;
 }
 
 header ul {
@@ -97,7 +117,7 @@ header ul {
 header ul li {
 	float: left;
 	position: relative;
-	text-decoration:none;
+	text-decoration: none;
 }
 
 header ul li a {
@@ -105,6 +125,7 @@ header ul li a {
 	padding: 24px;
 	font-size: 1.1em;
 	text-decoration: none;
+	transition: 0.25s;
 }
 
 header ul li a:hover {
@@ -117,7 +138,7 @@ header ul li ul {
 	position: absolute;
 	top: 70px;
 	right: 0px;
-	width: 186px;
+	width: 225px;
 	display: none;
 	z-index: 88888;
 }
@@ -152,40 +173,20 @@ header .menu-toggle	{
 	text-decoration: none;
 }
 
-.save {
-    float: right;
-}
 
 .post-form textarea, .post-form input {
-    width: 100%;
+	width: 90%;
+	
+	
 }
 
 .post h2 a, .post h2 a:visited {
     color: #FFFFFF;
 }
 
-.comment {
-	position: relative;
-	display: block;
-	margin: 25px 0 25px 0;
-	height: auto;
-}
 
-.comment-date {
-    
-	right: 0px;
-    color: #b71c1c;
-	padding: 10px;
-	position: absolute;
-	flex-direction: column;
-	font-size: 75%;
-}
 
-.signature {
-	width: 320px;
-	height: auto;
-	margin: 0;
-}
+
 
 .page-wrapper {
 	min-height: 100%;
@@ -271,7 +272,8 @@ header .menu-toggle	{
 .content .main-content.detail {
 	padding: 20px 50px;
 	font-size: 1.1em;
-	border: 1px solid red;
+	border: 1px solid #343536;
+	border-radius: 5px;
 }
 
 .content .main-content.detail .post-title{
@@ -356,9 +358,10 @@ header .menu-toggle	{
 }
 
 .content .sidebar {
-	width: 30%;
+	width: 25%;
 	float: left;
 	height: 300px;
+	margin-left: 25px;
 }
 
 .content .sidebar.detail {
@@ -398,6 +401,23 @@ header .menu-toggle	{
 .content .sidebar .section.topics ul li a:hover {
 	padding-left: 10px;
 	transition: all 0.3s;
+}
+
+.comment {
+	position: relative;
+	display: block;
+	margin: 25px 0 25px 0;
+	height: auto;
+}
+
+.comment-date {
+    
+	right: 0px;
+    color: #b71c1c;
+	padding: 10px;
+	position: absolute;
+	flex-direction: column;
+	font-size: 75%;
 }
 
 
@@ -488,6 +508,12 @@ header .menu-toggle	{
 	font-family: 'Montserrat',sans-serif;
 }
 
+.signature {
+	width: 320px;
+	height: auto;
+	margin: 0;
+}
+
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 940px)	{
@@ -531,7 +557,7 @@ header .menu-toggle	{
 	}
 
 	header ul li ul li a.logout {
-		color: red;
+		color: black;
 	}	
 	
 	header .menu-toggle {
@@ -552,6 +578,7 @@ header .menu-toggle	{
 
 	.content {
 		width: 100%;
+		margin: 10px 0 10px 0;
 	}
 
 	.content .main-content {
