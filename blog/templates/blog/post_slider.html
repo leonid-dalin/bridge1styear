@@ -10,10 +10,8 @@
 			<div class="post-wrapper">
 				{% for post in posts %}
 					<div class="abc">
-						{% if post.image %}
-						<div class="post-image">
+						{% if post.image %}	
 							<img class="slide-image" src="{{ post.image.url }}">
-						</div>
 						{% endif %}
 					<div class="post-info">
 						<h4><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
