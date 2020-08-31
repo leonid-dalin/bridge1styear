@@ -11,7 +11,7 @@
 				{% for post in posts %}
 					<div class="abc">
 						{% if post.image %}	
-							<img class="slide-image" src="{{ post.image.url }}">
+							<img class="slider-image" src="{{ post.image.url }}">
 						{% endif %}
 					<div class="post-info">
 						<h4><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
